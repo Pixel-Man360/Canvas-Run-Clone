@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +11,19 @@ public class SpawnHandler : MonoBehaviour
     private float leftOffset = 0;
     private Dictionary<int, GameObject> _spawnerList = new Dictionary<int, GameObject>();
     private Dictionary<int, List<GameObject>> _ballsListForEachSpawner = new Dictionary<int, List<GameObject>>();
+
+    public static event Action<Dictionary<int, GameObject>> OnBallsInstantiatedAtStart;
     
     void Awake()
     {
        AddBallsByWidth(5);
        AddBallsByLength(0, 4, 5);
+
+    }
+
+    void Start() 
+    {
+        OnBallsInstantiatedAtStart?.Invoke(_spawnerList);
     }
 
     

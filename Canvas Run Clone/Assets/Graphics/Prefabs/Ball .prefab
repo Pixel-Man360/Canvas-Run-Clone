@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421510ebe1c3e1d49904c5dc37ff470b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forwardSpeed: 300
+  _forwardSpeed: 400
   _sidewaysSpeed: 100
   _playerInput: {fileID: 7133735451172008506}
   _rb: {fileID: 7133735451172008507}

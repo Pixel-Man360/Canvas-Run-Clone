@@ -7,7 +7,7 @@ public class PlayerInput : MonoBehaviour
     
     void Update()
     {
-        MouseX = Input.GetAxis("Mouse X");
-        MouseY = Input.GetAxis("Mouse Y");
+        MouseX = Input.GetAxisRaw("Mouse X");
+        MouseY = Input.GetAxisRaw("Mouse Y");
     }
 }

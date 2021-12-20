@@ -37,5 +37,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.velocity = new Vector3(_sidewaysSpeed * _playerInput.MouseX * Time.fixedDeltaTime, _rb.velocity.y, _rb.velocity.z); 
         }
+
+        else 
+        {
+            _rb.velocity = new Vector3(_rb.velocity.x, _rb.velocity.y, _rb.velocity.z);
+        }
     }
 }
